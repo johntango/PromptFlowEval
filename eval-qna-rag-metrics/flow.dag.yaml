@@ -1,4 +1,6 @@
 $schema: https://azuremlschemas.azureedge.net/promptflow/latest/Flow.schema.json
+environment:
+  python_requirements_txt: requirements.txt
 inputs:
   metrics:
     type: string
@@ -423,14 +425,13 @@ nodes:
     deployment_name: gpt-4
     temperature: 0
     top_p: 1
-    stop: ""
     max_tokens: 1000
     presence_penalty: 0
     frequency_penalty: 0
-    logit_bias: ""
     FullBody: ${inputs.documents}
     answer: ${inputs.answer}
     question: ${inputs.question}
+    model: gpt-3.5-turbo-1106
   provider: AzureOpenAI
   connection: open_ai_connection
   api: chat
@@ -448,13 +449,12 @@ nodes:
     deployment_name: gpt-4
     temperature: 0
     top_p: 1
-    stop: ""
     max_tokens: 1000
     presence_penalty: 0
     frequency_penalty: 0
-    logit_bias: ""
     FullBody: ${inputs.documents}
     question: ${inputs.question}
+    model: gpt-3.5-turbo-1106
   provider: AzureOpenAI
   connection: open_ai_connection
   api: chat
@@ -472,14 +472,13 @@ nodes:
     deployment_name: gpt-4
     temperature: 0
     top_p: 1
-    stop: ""
     max_tokens: 1000
     presence_penalty: 0
     frequency_penalty: 0
-    logit_bias: ""
     FullBody: ${inputs.documents}
     answer: ${inputs.answer}
     question: ${inputs.question}
+    model: gpt-3.5-turbo-1106
   provider: AzureOpenAI
   connection: open_ai_connection
   api: chat
@@ -531,6 +530,3 @@ nodes:
     question: ${inputs.question}
     selected_metrics: ${select_metrics.output}
   use_variants: false
-node_variants: {}
-environment:
-  python_requirements_txt: requirements.txt

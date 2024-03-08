@@ -1,0 +1,177 @@
+{
+  "package": {},
+  "code": {
+    "concat_scores.py": {
+      "type": "python",
+      "inputs": {
+        "rag_retrieval_score": {
+          "type": [
+            "object"
+          ]
+        },
+        "rag_grounding_score": {
+          "type": [
+            "object"
+          ]
+        },
+        "rag_generation_score": {
+          "type": [
+            "object"
+          ]
+        }
+      },
+      "source": "concat_scores.py",
+      "function": "concat_results"
+    },
+    "aggregate_variants_results.py": {
+      "type": "python",
+      "inputs": {
+        "results": {
+          "type": [
+            "object"
+          ]
+        },
+        "metrics": {
+          "type": [
+            "object"
+          ]
+        }
+      },
+      "source": "aggregate_variants_results.py",
+      "function": "aggregate_variants_results"
+    },
+    "rag_groundedness_prompt.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "question": {
+          "type": [
+            "string"
+          ]
+        },
+        "answer": {
+          "type": [
+            "string"
+          ]
+        },
+        "FullBody": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "rag_groundedness_prompt.jinja2"
+    },
+    "rag_retrieval_prompt.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "question": {
+          "type": [
+            "string"
+          ]
+        },
+        "FullBody": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "rag_retrieval_prompt.jinja2"
+    },
+    "rag_generation_prompt.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "question": {
+          "type": [
+            "string"
+          ]
+        },
+        "answer": {
+          "type": [
+            "string"
+          ]
+        },
+        "FullBody": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "rag_generation_prompt.jinja2"
+    },
+    "parse_generation_score.py": {
+      "type": "python",
+      "inputs": {
+        "rag_generation_score": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "parse_generation_score.py",
+      "function": "parse_generation_output"
+    },
+    "parse_retrival_score.py": {
+      "type": "python",
+      "inputs": {
+        "retrieval_output": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "parse_retrival_score.py",
+      "function": "parse_retrieval_output"
+    },
+    "parse_groundedness_score.py": {
+      "type": "python",
+      "inputs": {
+        "rag_grounding_score": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "parse_groundedness_score.py",
+      "function": "parse_grounding_output"
+    },
+    "select_metrics.py": {
+      "type": "python",
+      "inputs": {
+        "metrics": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "select_metrics.py",
+      "function": "select_metrics"
+    },
+    "validate_input.py": {
+      "type": "python",
+      "inputs": {
+        "question": {
+          "type": [
+            "string"
+          ]
+        },
+        "answer": {
+          "type": [
+            "string"
+          ]
+        },
+        "documents": {
+          "type": [
+            "string"
+          ]
+        },
+        "selected_metrics": {
+          "type": [
+            "object"
+          ]
+        }
+      },
+      "source": "validate_input.py",
+      "function": "validate_input"
+    }
+  }
+}

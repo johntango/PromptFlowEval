@@ -1,0 +1,26 @@
+2024-03-08 17:47:42 +0000   12547 execution.flow     INFO     Start executing nodes in thread pool mode.
+2024-03-08 17:47:42 +0000   12547 execution.flow     INFO     Start to run 9 nodes with concurrency level 16.
+2024-03-08 17:47:42 +0000   12547 execution.flow     INFO     Executing node select_metrics. node run id: b85575d0-ee2b-4fed-ac6c-9814b4ccb069_select_metrics_0
+2024-03-08 17:47:42 +0000   12547 execution.flow     INFO     Node select_metrics completes.
+2024-03-08 17:47:42 +0000   12547 execution.flow     INFO     Executing node validate_input. node run id: b85575d0-ee2b-4fed-ac6c-9814b4ccb069_validate_input_0
+2024-03-08 17:47:42 +0000   12547 execution.flow     INFO     Node validate_input completes.
+2024-03-08 17:47:42 +0000   12547 execution.flow     INFO     The node 'gpt_groundedness' will be executed because the activate condition is met, i.e. '${validate_input.output.gpt_groundedness}' is equal to 'True'.
+2024-03-08 17:47:42 +0000   12547 execution.flow     INFO     The node 'gpt_retrieval_score' will be executed because the activate condition is met, i.e. '${validate_input.output.gpt_retrieval_score}' is equal to 'True'.
+2024-03-08 17:47:42 +0000   12547 execution.flow     INFO     The node 'gpt_relevance' will be executed because the activate condition is met, i.e. '${validate_input.output.gpt_relevance}' is equal to 'True'.
+2024-03-08 17:47:42 +0000   12547 execution.flow     INFO     Executing node gpt_groundedness. node run id: b85575d0-ee2b-4fed-ac6c-9814b4ccb069_gpt_groundedness_0
+2024-03-08 17:47:42 +0000   12547 execution.flow     INFO     Executing node gpt_retrieval_score. node run id: b85575d0-ee2b-4fed-ac6c-9814b4ccb069_gpt_retrieval_score_0
+2024-03-08 17:47:42 +0000   12547 execution.flow     INFO     Executing node gpt_relevance. node run id: b85575d0-ee2b-4fed-ac6c-9814b4ccb069_gpt_relevance_0
+2024-03-08 17:47:44 +0000   12547 execution.flow     INFO     Node gpt_groundedness completes.
+2024-03-08 17:47:44 +0000   12547 execution.flow     INFO     Node gpt_relevance completes.
+2024-03-08 17:47:44 +0000   12547 execution.flow     INFO     Executing node parse_grounding_score. node run id: b85575d0-ee2b-4fed-ac6c-9814b4ccb069_parse_grounding_score_0
+2024-03-08 17:47:44 +0000   12547 execution.flow     INFO     Executing node parse_generation_score. node run id: b85575d0-ee2b-4fed-ac6c-9814b4ccb069_parse_generation_score_0
+2024-03-08 17:47:44 +0000   12547 execution.flow     INFO     Node parse_generation_score completes.
+2024-03-08 17:47:44 +0000   12547 execution.flow     INFO     Node parse_grounding_score completes.
+2024-03-08 17:47:46 +0000   12547 execution.flow     INFO     Node gpt_retrieval_score completes.
+2024-03-08 17:47:46 +0000   12547 execution.flow     INFO     Executing node parse_retrieval_score. node run id: b85575d0-ee2b-4fed-ac6c-9814b4ccb069_parse_retrieval_score_0
+2024-03-08 17:47:46 +0000   12547 execution.flow     INFO     Node parse_retrieval_score completes.
+2024-03-08 17:47:46 +0000   12547 execution.flow     INFO     Executing node concat_scores. node run id: b85575d0-ee2b-4fed-ac6c-9814b4ccb069_concat_scores_0
+2024-03-08 17:47:46 +0000   12547 execution.flow     INFO     Node concat_scores completes.
+2024-03-08 17:47:46 +0000   12547 execution.flow     INFO     Start to run 1 nodes with concurrency level 16.
+2024-03-08 17:47:46 +0000   12547 execution.flow     INFO     Executing node aggregate_variants_results. node run id: b85575d0-ee2b-4fed-ac6c-9814b4ccb069_aggregate_variants_results_reduce
+2024-03-08 17:47:46 +0000   12547 execution.flow     INFO     Node aggregate_variants_results completes.
